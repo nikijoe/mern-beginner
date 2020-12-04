@@ -61,15 +61,15 @@ function App() {
   }
   return <div className='App'>
     <div className= 'inputs'>
-      {/* <form onSubmit={addFriend}> */}
+      <form onSubmit={addFriend} enctype="application/x-www-form-urlencoded">
         Name:
       <input type='text' placeholder= 'Friend name...' ref={nameFocus}
       onChange={(event)=> setName(event.target.value)} value={name}/>
       Age:
       <input type='number' placeholder= 'Friend age...' 
       onChange={(event)=> setAge(event.target.value)} value={age}/>
-      <button onClick={addFriend}>Add a friend</button>
-      {/* </form> */}
+      <button>Add a friend</button>
+      </form>
     </div>
     <div className="friends">
       {friends.map((friend)=> {
